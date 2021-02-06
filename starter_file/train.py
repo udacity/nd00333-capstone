@@ -1,4 +1,5 @@
 from sklearn.linear_model import LogisticRegression
+from azureml.core import Workspace, Experiment
 import argparse
 import os
 import numpy as np
@@ -8,7 +9,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
+from azureml.core import Dataset
 from azureml.data.dataset_factory import TabularDatasetFactory
+from azureml.core import Workspace, Dataset
+
 
 # Create Dataset
 # Data is located at:
@@ -16,10 +20,10 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 
 
 
+# ws = Workspace.from_config()
+# ws = run.experiment.workspace
 
-run = Run.get_context()
-ws = run.experiment.workspace
-ds = ws.datasets['data']
+# ds = ws.datasets['data']
 
 def clean_data(data):
 
@@ -30,9 +34,9 @@ def clean_data(data):
     x_df.drop(["enrollee_id", "city"], axis=1, inplace=True)
     
     #gender column include values male, female and others
-    gender = pd.get_dummies(x_df.job, prefix="gender")
+    gender = pd.get_dummies(x_df.gender, prefix="gender")
     x_df.drop("gender", inplace=True, axis=1)
-    x_df = x_df.join(gender)
+    x_df.join(gender)
     
     #relevant experience:1, not experienced:0
     x_df["relevent_experience"] = x_df.relevent_experience.apply(lambda s: 1 if s == "Has relevent experience" else 0)
@@ -66,14 +70,18 @@ def clean_data(data):
     return x_df, y_df
 
 
-x, y = clean_data(ds)
-x_train, x_test , y_train, y_test = train_test_split(x, y, test_size=10, random_state=42)
+
 
 
 
 def main():
     # Add arguments to script
     parser = argparse.ArgumentParser()
+
+    path_url='https://raw.githubusercontent.com/himanimadaan/nd00333-capstone/master/starter_file/Dataset/data.csv'
+    ds = Dataset.Tabular.from_delimited_files(path =path_url)
+    
+    run = Run.get_context()
 
     parser.add_argument('--C', type=float, default=1.0, help="Inverse of regularization strength. Smaller values cause stronger regularization")
     parser.add_argument('--max_iter', type=int, default=100, help="Maximum number of iterations to converge")
@@ -83,9 +91,12 @@ def main():
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
 
-    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
-
-    accuracy = model.score(x_test, y_test)
+    x, y = clean_data(ds)
+    x_train, x_test , y_train, y_test = train_test_split(x, y, test_size=10, random_state=42)
+    
+    hd_model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
+    joblib.dump(hd_model,'outputs/hd_model.joblib')
+    accuracy = hd_model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
 
 if __name__ == '__main__':
