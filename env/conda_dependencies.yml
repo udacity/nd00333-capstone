@@ -1,0 +1,31 @@
+channels:
+- anaconda
+- conda-forge
+- pytorch
+dependencies:
+- python=3.6.2
+- pip=20.2.4
+- pip:
+  - azureml-core==1.21.0.post1
+  - azureml-pipeline-core==1.21.0
+  - azureml-telemetry==1.21.0
+  - azureml-defaults==1.21.0
+  - azureml-interpret==1.21.0
+  - azureml-automl-core==1.21.0
+  - azureml-automl-runtime==1.21.0
+  - azureml-train-automl-client==1.21.0
+  - azureml-train-automl-runtime==1.21.0
+  - azureml-dataset-runtime==1.21.0
+  - inference-schema
+  - py-cpuinfo==5.0.0
+  - boto3==1.15.18
+  - botocore==1.18.18
+- numpy~=1.18.0
+- scikit-learn==0.22.1
+- pandas~=0.25.0
+- py-xgboost<=0.90
+- fbprophet==0.5
+- holidays==0.9.11
+- setuptools-git
+- psutil>5.0.0,<6.0.0
+name: azureml_20a8278aa8b20dd48cc50f56a6d2586c
