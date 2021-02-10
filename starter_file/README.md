@@ -31,7 +31,7 @@ This project is done using Azure ML lab and a workspace was already provided to 
 - Set up a compute instance, give it a name such `project-compute` with `STANDARD_DS3_V2` size.
 - Create a ML compute cluster with `STANDARD_DS12_V2`, 1 minimun node and 6 maximum number of nodes.
 ````
-<hr/>
+
 ## Dataset
 
 ### Overview
@@ -62,32 +62,18 @@ DFA - Signal fractal scaling exponent
 spread1,spread2,PPE - Three nonlinear measures of fundamental frequency variation
 ````
 ````
-The Dataset contains following columns:
+Description of the columns:
 
-1) name - object
-2) MDVP:Fo(Hz) - float64
-3) MDVP:Fhi(Hz) - float64
-4) MDVP:Flo(Hz) - float64
-5) MDVP:Jitter(%) - float64
-6) MDVP:Jitter(Abs) - float64
-7) MDVP:RAP - float64
-8) MDVP:PPQ - float64
-9) Jitter:DDP - float64
-10) MDVP:Shimmer - float64
-11) MDVP:Shimmer(dB) - float64
-12) Shimmer:APQ3 - float64
-13) Shimmer:APQ5 - float64
-14) MDVP:APQ - float64
-15) Shimmer:DDA - float64
-16) NHR - float64
-17) HNR - float64
-18) status - int64
-19) RPDE - float64
-20) DFA - float64
-21) spread1 - float64
-22) spread2 - float64
-23) D2 - float64
-24) PPE - float64
+MDVP:Fo(Hz) - Average vocal fundamental frequency
+MDVP:Fhi(Hz) - Maximum vocal fundamental frequency
+MDVP:Flo(Hz) - Minimum vocal fundamental frequency
+MDVP:Jitter(%),MDVP:Jitter(Abs),MDVP:RAP,MDVP:PPQ,Jitter:DDP - Several measures of variation in fundamental frequency
+MDVP:Shimmer,MDVP:Shimmer(dB),Shimmer:APQ3,Shimmer:APQ5,MDVP:APQ,Shimmer:DDA - Several measures of variation in amplitude
+NHR,HNR - Two measures of ratio of noise to tonal components in the voice
+RPDE,D2 - Two nonlinear dynamical complexity measures
+DFA - Signal fractal scaling exponent
+spread1,spread2,PPE - Three nonlinear measures of fundamental frequency variation
+status - Health status of the subject (one) - Parkinson's, (zero) - healthy
 ````
 ### Task
 The goal of this project is to train the model to predict whether these individuals have Parkinson's disease or not.
