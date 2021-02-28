@@ -80,7 +80,7 @@ DEATH_EVENT - If the patient deceased during the follow-up period (boolean)
 The goal of this project is to train the model to predict mortality caused by heart disease. (death=1, no death=0)
 ### Access
 The dataset can be accessed by loading a csv file in the azure platform
-[dataset](dataset.png)
+![dataset](/starter_file/dataset.png)
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
