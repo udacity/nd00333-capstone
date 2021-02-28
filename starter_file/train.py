@@ -10,7 +10,7 @@ import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
-dataset_path = "https://raw.githubusercontent.com/claudiabringaseverett/nd00333-capstone/master/starter_file/parkinsons.csv"
+dataset_path = "https://raw.githubusercontent.com/claudiabringaseverett/nd00333-capstone/master/starter_file/heart.csv"
 ds = TabularDatasetFactory.from_delimited_files(path = dataset_path)
 
 x_df = data.to_pandas_dataframe().dropna()
