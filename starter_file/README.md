@@ -35,7 +35,7 @@ This project is done using Azure ML lab and a workspace was already provided to 
 ## Dataset
 
 ### Overview
-For this project, I am using the [Heart disease dataset](https://www.kaggle.com/ronitf/heart-disease-uci) from Kaggle. The term “heart disease” refers to several types of heart conditions. The most common type of heart disease in the United States is coronary artery disease (CAD), which affects the blood flow to the heart. Decreased blood flow can cause a heart attack. Sometimes heart disease may be “silent” and not diagnosed until a person experiences signs or symptoms of a heart attack, heart failure, or an arrhythmia. When these events happen, symptoms may include:
+For this project, I am using the [Heart disease dataset](https://www.kaggle.com/andrewmvd/heart-failure-clinical-data) from Kaggle. The term “heart disease” refers to several types of heart conditions. The most common type of heart disease in the United States is coronary artery disease (CAD), which affects the blood flow to the heart. Decreased blood flow can cause a heart attack. Sometimes heart disease may be “silent” and not diagnosed until a person experiences signs or symptoms of a heart attack, heart failure, or an arrhythmia. When these events happen, symptoms may include:
 
 **Heart attack**: Chest pain or discomfort, upper back or neck pain, indigestion, heartburn, nausea or vomiting, extreme fatigue, upper body discomfort, dizziness, and shortness of breath.<br />
 **Arrhythmia**: Fluttering feelings in the chest (palpitations).<br />
