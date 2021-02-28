@@ -59,34 +59,21 @@ This database contains 76 attributes, but all published experiments refer to usi
 ````
 Attribute information:
 
-1.age
-2.anemia
-3.high blood pressure
-4.Creatinine phosphokinase (CPK)
-5.diabetes
-6.ejection fraction
-7.sex
-8.platelets
-9.serum creatinine
-10.serum sodium
-11.smoking
-12.time
-````
-````
-Description information:
-
-1.age - age of patient
-2.anemia - decrease of red blood cells 
-3.high blood pressure - patient has hypertension
-4.Creatinine phosphokinase (CPK) - level of CPK enzyme in the blood
-5.diabetes - if patient has diabetes
-6.ejection fraction - percentage of blood leaving the heart at each contraction
-7.sex - women or men
-8.platelets - platelets in the blood
-9.serum creatinine - level of creatinine in the blood
-10.serum sodium - level of sodium in the blood
-11.smoking - if patient smokes
-12.time - follow up period
+Column | Description
+------ | -----------
+age | Age of the patient
+anemia | Decrease of red blood cells or hemoglobin (boolean)
+creatinine_phosphokinase | Level of the CPK enzyme in the blood (mcg/L)
+diabetes | If the patient has diabetes (boolean)
+ejection_fraction | Percentage of blood leaving the heart at each contraction (percentage)
+high_blood_pressure | If the patient has hypertension (boolean)
+platelets | Platelets in the blood (kiloplatelets/mL)
+serum_creatinine | Level of serum creatinine in the blood (mg/dL)
+serum_sodium | Level of serum sodium in the blood (mEq/L)
+sex | Woman or man (binary)
+smoking | If the patient smokes or not (boolean)
+time | Follow-up period (days)
+DEATH_EVENT | If the patient deceased during the follow-up period (boolean)
 ````
 
 ### Task
