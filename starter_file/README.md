@@ -44,8 +44,8 @@ The term “heart disease” refers to several types of heart conditions. The mo
 **Heart failure**: Shortness of breath, fatigue, or swelling of the feet, ankles, legs, abdomen, or neck veins.<br />
 
 <p align="center">
-<img src="parkinsons-disease.jpg") /></p>
-<p align="center">Figure 1. Parkinson's Disease symptoms</p>
+<img src="heart.jpeg") /></p>
+<p align="center">Figure 1. Types of Heart Disease</p>
 
 This dataset is composed of a range of biomedical voice measurements from 31 people, 23 with Parkinson's disease (PD). Each column in the table is a particular voice measure, and each row corresponds one of 195 voice recording from these individuals ("name" column). The main aim of the data is to discriminate healthy people from those with PD, according to "status" column which is set to 0 for healthy and 1 for Parkinson's Disease (PD).
 ````
