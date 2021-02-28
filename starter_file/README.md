@@ -44,8 +44,8 @@ The term “heart disease” refers to several types of heart conditions. The mo
 **Heart failure**: Shortness of breath, fatigue, or swelling of the feet, ankles, legs, abdomen, or neck veins.<br />
 
 <p align="center">
-<img src="heart.jpeg") /></p>
-<p align="center">Figure 1. Types of Heart Disease</p>
+<img src="heart1.png") /></p>
+<p align="center">Figure 1. Heart Disease Information</p>
 
 This dataset is composed of a range of biomedical voice measurements from 31 people, 23 with Parkinson's disease (PD). Each column in the table is a particular voice measure, and each row corresponds one of 195 voice recording from these individuals ("name" column). The main aim of the data is to discriminate healthy people from those with PD, according to "status" column which is set to 0 for healthy and 1 for Parkinson's Disease (PD).
 ````
@@ -135,7 +135,7 @@ Centers for Disease Control and Prevention. Underlying Cause of Death, 1999–20
 
 Virani SS, Alonso A, Benjamin EJ, Bittencourt MS, Callaway CW, Carson AP, et al. Heart disease and stroke statistics—2020 update: a report from the American Heart Associationexternal icon. Circulation. 2020;141(9):e139–e596.
 
-Figure 1. Fist Choice Neurology. https://www.verywellhealth.com/heart-disease-treatments-overview-1745923
+Figure 1. Fist Choice Neurology. https://www.healthcentral.com/condition/heart-disease
 
 
 
