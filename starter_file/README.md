@@ -95,8 +95,7 @@ The goal of this project is to train the model to predict whether a person is su
 ### Access
 I uploaded the .csv file into the repo for easy access. To access on Azure notebooks, we need to download it from an external link.
 ````
-from azureml.data.dataset_factory import TabularDatasetFactory
-dataset_path = "https://raw.githubusercontent.com/claudiabringaseverett/nd00333-capstone/master/starter_file/parkinsons.csv"
+dataset_path = "https://raw.githubusercontent.com/claudiabringaseverett/nd00333-capstone/master/starter_file/heart.csv"
 ds = TabularDatasetFactory.from_delimited_files(path = dataset_path)
 ````
 
