@@ -1,6 +1,6 @@
-# Parkinson's Disease Prediction
+# Heart Failure Prediction
 
-This Capstone Project is the last project of the Azure Machine Learning nanodegree and I'm going to use the Parkison's disease dataset to predict the disease. In this project, two models are created in the following way:
+This Capstone Project is the last project of the Azure Machine Learning nanodegree and I'm going to use the Heart Disease dataset to predict the disease. In this project, two models are created in the following way:
   1. First, Using AutoML model
   2. Then, using a customized model and tuning its hyperparameters with HyperDrive
 
@@ -35,9 +35,13 @@ This project is done using Azure ML lab and a workspace was already provided to 
 ## Dataset
 
 ### Overview
-For this project, I am using the [Parkinson's disease dataset](https://www.kaggle.com/nidaguler/parkinsons-data-set) from Kaggle. 
+For this project, I am using the [Heart disease dataset](https://www.kaggle.com/ronitf/heart-disease-uci) from Kaggle. 
 
-Parkinson's disease, also referred as PD, is a neurodegenerative disorder that affects predominately dopamine-producing neurons in a specific area of the brain called substantia nigra. The most common motor symptoms are tremors (rhythmic shaking), stiffness, slowness of movement and the non motor symptoms are sleep problems, constipation, axiety, depression, fatigue, etc. In the US, there are around 1 million people who live with Parkinson's disease and around 10 million worldwide. Most people who develop this disease are around age 50 and low cases of younger adults. The exact cause of Parkinson’s is still unknown and there is no cure for it, but there is a lot of research being done to learn more about it. I became interested in learning more about this disease since my dad was diagnosed with it 4 years ago and I want to have a better understanding of the disease. 
+The term “heart disease” refers to several types of heart conditions. The most common type of heart disease in the United States is coronary artery disease (CAD), which affects the blood flow to the heart. Decreased blood flow can cause a heart attack. Sometimes heart disease may be “silent” and not diagnosed until a person experiences signs or symptoms of a heart attack, heart failure, or an arrhythmia. When these events happen, symptoms may include:
+
+**Heart attack**: Chest pain or discomfort, upper back or neck pain, indigestion, heartburn, nausea or vomiting, extreme fatigue, upper body discomfort, dizziness, and shortness of breath.<br />
+**Arrhythmia**: Fluttering feelings in the chest (palpitations).<br />
+**Heart failure**: Shortness of breath, fatigue, or swelling of the feet, ankles, legs, abdomen, or neck veins.<br />
 
 <p align="center">
 <img src="parkinsons-disease.jpg") /></p>
@@ -127,12 +131,11 @@ ds = TabularDatasetFactory.from_delimited_files(path = dataset_path)
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 
 ## References
-'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection',
-Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM.
-BioMedical Engineering OnLine 2007, 6:23 (26 June 2007)
+Centers for Disease Control and Prevention. Underlying Cause of Death, 1999–2018. CDC WONDER Online Database. Atlanta, GA: Centers for Disease Control and Prevention; 2018. Accessed March 12, 2020.
 
-Figure 1. Fist Choice Neurology. https://www.fcneurology.net/health-topics/parkinsons-disease/
+Virani SS, Alonso A, Benjamin EJ, Bittencourt MS, Callaway CW, Carson AP, et al. Heart disease and stroke statistics—2020 update: a report from the American Heart Associationexternal icon. Circulation. 2020;141(9):e139–e596.
 
-What is Parkinson's Disease. https://www.apdaparkinson.org/what-is-parkinsons/
+Figure 1. Fist Choice Neurology. https://www.verywellhealth.com/heart-disease-treatments-overview-1745923
+
 
 
