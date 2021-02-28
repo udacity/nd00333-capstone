@@ -55,7 +55,9 @@ High blood pressure, high blood cholesterol, and smoking are key risk factors fo
 <p align="center">Figure 1. Heart Disease Information</p>
 
 
-This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to this date. This is a classification problem, with input features as a variety of parameters, and the target variable DEATH_EVENT which is a binary variable, predicting whether heart disease is present or not (1=yes, 0=no). The input features along with meanings, measurement units, and intervals of each feature as described below:
+Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year, which accounts for 31% of all deaths worlwide. Heart failure is a common event caused by CVDs and this dataset contains 12 features that can be used to predict mortality by heart failure. Most cardiovascular diseases can be prevented by addressing behavioural risk factors such as tobacco use, unhealthy diet and obesity, physical inactivity and harmful use of alcohol using population-wide strategies.
+
+People with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors such as hypertension, diabetes, hyperlipidaemia or already established disease) need early detection and management wherein a machine learning model can be of great help.
 ````
 Attribute information:
 
@@ -116,6 +118,8 @@ ds = TabularDatasetFactory.from_delimited_files(path = dataset_path)
 Centers for Disease Control and Prevention. Underlying Cause of Death, 1999–2018. CDC WONDER Online Database. Atlanta, GA: Centers for Disease Control and Prevention; 2018. Accessed March 12, 2020.
 
 Virani SS, Alonso A, Benjamin EJ, Bittencourt MS, Callaway CW, Carson AP, et al. Heart disease and stroke statistics—2020 update: a report from the American Heart Associationexternal icon. Circulation. 2020;141(9):e139–e596.
+
+Davide Chicco, Giuseppe Jurman: Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone. BMC Medical Informatics and Decision Making 20, 16 (2020) https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-020-1023-5
 
 Figure 1. Fist Choice Neurology. https://www.healthcentral.com/condition/heart-disease
 
