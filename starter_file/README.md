@@ -60,22 +60,37 @@ This database contains 76 attributes, but all published experiments refer to usi
 Attribute information:
 
 1.age
-2.sex
-3.chest pain type (4 values)
-4.resting blood pressure
-5.serum cholestoral in mg/dl
-6.fasting blood sugar > 120 mg/dl
-7.resting electrocardiographic results (values 0,1,2)
-8.maximum heart rate achieved
-9.exercise induced angina
-10.oldpeak = ST depression induced by exercise relative to rest
-11.the slope of the peak exercise ST segment
-12.number of major vessels (0-3) colored by flourosopy
-13.thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+2.anemia
+3.high blood pressure
+4.Creatinine phosphokinase (CPK)
+5.diabetes
+6.ejection fraction
+7.sex
+8.platelets
+9.serum creatinine
+10.serum sodium
+11.smoking
+12.time
+````
+````
+Description information:
+
+1.age - age of patient
+2.anemia - decrease of red blood cells 
+3.high blood pressure - patient has hypertension
+4.Creatinine phosphokinase (CPK) - level of CPK enzyme in the blood
+5.diabetes - if patient has diabetes
+6.ejection fraction - percentage of blood leaving the heart at each contraction
+7.sex - women or men
+8.platelets - platelets in the blood
+9.serum creatinine - level of creatinine in the blood
+10.serum sodium - level of sodium in the blood
+11.smoking - if patient smokes
+12.time - follow up period
 ````
 
 ### Task
-The goal of this project is to train the model to predict whether these individuals have Parkinson's disease or not.
+The goal of this project is to train the model to predict whether a person is suffering from heart disease or not.
 
 ### Access
 I uploaded the .csv file into the repo for easy access. To access on Azure notebooks, we need to download it from an external link.
