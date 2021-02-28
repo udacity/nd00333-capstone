@@ -75,8 +75,7 @@ DEATH_EVENT - If the patient deceased during the follow-up period (boolean)
 ````
 
 ### Task
-The goal of this project is to train the model to predict whether a person is suffering from heart disease or not.
-
+The goal of this project is to train the model to predict mortality caused by heart disease. (death=1, no death=0)
 ### Access
 I uploaded the .csv file into the repo for easy access. To access on Azure notebooks, we need to download it from an external link.
 ````
