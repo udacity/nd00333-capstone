@@ -94,7 +94,7 @@ I uploaded the .csv file into the repo for easy access. To access on Azure noteb
 ````
 from azureml.data.dataset_factory import TabularDatasetFactory
 dataset_path = "https://raw.githubusercontent.com/claudiabringaseverett/nd00333-capstone/master/starter_file/parkinsons.csv"
-ds = TabularDatasetFactory.from_delimited_files(path=url_path)
+ds = TabularDatasetFactory.from_delimited_files(path = dataset_path)
 ````
 
 ## Automated ML
