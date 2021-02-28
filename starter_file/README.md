@@ -79,11 +79,8 @@ DEATH_EVENT - If the patient deceased during the follow-up period (boolean)
 ### Task
 The goal of this project is to train the model to predict mortality caused by heart disease. (death=1, no death=0)
 ### Access
-I uploaded the .csv file into the repo for easy access. To access on Azure notebooks, we need to download it from an external link.
-````
-dataset_path = "https://raw.githubusercontent.com/claudiabringaseverett/nd00333-capstone/master/starter_file/heart.csv"
-ds = TabularDatasetFactory.from_delimited_files(path = dataset_path)
-````
+The dataset can be accessed by loading a csv file in the azure platform
+[dataset](dataset.png)
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
