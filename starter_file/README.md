@@ -93,7 +93,7 @@ The goal of this project is to train the model to predict whether these individu
 I uploaded the .csv file into the repo for easy access. To access on Azure notebooks, we need to download it from an external link.
 ````
 from azureml.data.dataset_factory import TabularDatasetFactory
-url_path = "https://raw.githubusercontent.com/cladiabringaseverett/nd00333-capstone/master/starter_file/parkinsons.csv"
+dataset_path = "https://raw.githubusercontent.com/claudiabringaseverett/nd00333-capstone/master/starter_file/parkinsons.csv"
 ds = TabularDatasetFactory.from_delimited_files(path=url_path)
 ````
 
