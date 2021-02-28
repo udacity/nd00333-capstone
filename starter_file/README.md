@@ -35,61 +35,45 @@ This project is done using Azure ML lab and a workspace was already provided to 
 ## Dataset
 
 ### Overview
-For this project, I am using the [Heart disease dataset](https://www.kaggle.com/ronitf/heart-disease-uci) from Kaggle. 
-
-The term “heart disease” refers to several types of heart conditions. The most common type of heart disease in the United States is coronary artery disease (CAD), which affects the blood flow to the heart. Decreased blood flow can cause a heart attack. Sometimes heart disease may be “silent” and not diagnosed until a person experiences signs or symptoms of a heart attack, heart failure, or an arrhythmia. When these events happen, symptoms may include:
+For this project, I am using the [Heart disease dataset](https://www.kaggle.com/ronitf/heart-disease-uci) from Kaggle. The term “heart disease” refers to several types of heart conditions. The most common type of heart disease in the United States is coronary artery disease (CAD), which affects the blood flow to the heart. Decreased blood flow can cause a heart attack. Sometimes heart disease may be “silent” and not diagnosed until a person experiences signs or symptoms of a heart attack, heart failure, or an arrhythmia. When these events happen, symptoms may include:
 
 **Heart attack**: Chest pain or discomfort, upper back or neck pain, indigestion, heartburn, nausea or vomiting, extreme fatigue, upper body discomfort, dizziness, and shortness of breath.<br />
 **Arrhythmia**: Fluttering feelings in the chest (palpitations).<br />
 **Heart failure**: Shortness of breath, fatigue, or swelling of the feet, ankles, legs, abdomen, or neck veins.<br />
 
+What are the risk factors for heart disease?
+High blood pressure, high blood cholesterol, and smoking are key risk factors for heart disease. About half of Americans (47%) have at least one of these three risk factors. Several other medical conditions and lifestyle choices can also put people at a higher risk for heart disease, including:
+
+- Diabetes
+- Overweight and obesity
+- Unhealthy diet
+- Physical inactivity
+- Excessive alcohol use
+
 <p align="center">
 <img src="heart1.png") /></p>
 <p align="center">Figure 1. Heart Disease Information</p>
 
-This dataset is composed of a range of biomedical voice measurements from 31 people, 23 with Parkinson's disease (PD). Each column in the table is a particular voice measure, and each row corresponds one of 195 voice recording from these individuals ("name" column). The main aim of the data is to discriminate healthy people from those with PD, according to "status" column which is set to 0 for healthy and 1 for Parkinson's Disease (PD).
+
+This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to this date. This is a classification problem, with input features as a variety of parameters, and the target variable DEATH_EVENT which is a binary variable, predicting whether heart disease is present or not (1=yes, 0=no). The input features along with meanings, measurement units, and intervals of each feature as described below:
 ````
 Attribute information:
 
-1) name - object
-2) MDVP:Fo(Hz) - float64
-3) MDVP:Fhi(Hz) - float64
-4) MDVP:Flo(Hz) - float64
-5) MDVP:Jitter(%) - float64
-6) MDVP:Jitter(Abs) - float64
-7) MDVP:RAP - float64
-8) MDVP:PPQ - float64
-9) Jitter:DDP - float64
-10) MDVP:Shimmer - float64
-11) MDVP:Shimmer(dB) - float64
-12) Shimmer:APQ3 - float64
-13) Shimmer:APQ5 - float64
-14) MDVP:APQ - float64
-15) Shimmer:DDA - float64
-16) NHR - float64
-17) HNR - float64
-18) status - int64
-19) RPDE - float64
-20) DFA - float64
-21) spread1 - float64
-22) spread2 - float64
-23) D2 - float64
-24) PPE - float64
+1.age
+2.sex
+3.chest pain type (4 values)
+4.resting blood pressure
+5.serum cholestoral in mg/dl
+6.fasting blood sugar > 120 mg/dl
+7.resting electrocardiographic results (values 0,1,2)
+8.maximum heart rate achieved
+9.exercise induced angina
+10.oldpeak = ST depression induced by exercise relative to rest
+11.the slope of the peak exercise ST segment
+12.number of major vessels (0-3) colored by flourosopy
+13.thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
 ````
-````
-Description of the columns:
 
-MDVP:Fo(Hz) - Average vocal fundamental frequency
-MDVP:Fhi(Hz) - Maximum vocal fundamental frequency
-MDVP:Flo(Hz) - Minimum vocal fundamental frequency
-MDVP:Jitter(%),MDVP:Jitter(Abs),MDVP:RAP,MDVP:PPQ,Jitter:DDP - Several measures of variation in fundamental frequency
-MDVP:Shimmer,MDVP:Shimmer(dB),Shimmer:APQ3,Shimmer:APQ5,MDVP:APQ,Shimmer:DDA - Several measures of variation in amplitude
-NHR,HNR - Two measures of ratio of noise to tonal components in the voice
-RPDE,D2 - Two nonlinear dynamical complexity measures
-DFA - Signal fractal scaling exponent
-spread1,spread2,PPE - Three nonlinear measures of fundamental frequency variation
-status - Health status of the subject (one) - Parkinson's, (zero) - healthy
-````
 ### Task
 The goal of this project is to train the model to predict whether these individuals have Parkinson's disease or not.
 
