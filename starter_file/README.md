@@ -28,7 +28,7 @@ After these steps are performed, we compare the performance of both models and d
 ## Project Set Up and Installation
 This project is done using Azure ML lab and a workspace was already provided to us. In order to start we need to do the following:
 ````
-- Set up a compute instance, give it a name such `project-compute` with `STANDARD_DS3_V2` size.
+- Set up a compute instance, give it a name such `project-compute` with `STANDARD_DS2_V2` size.
 - Create a ML compute cluster with `STANDARD_DS12_V2`, 1 minimun node and 6 maximum number of nodes.
 ````
 
